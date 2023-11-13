@@ -17,3 +17,7 @@ Configuramos la password a postgres del usuario postgres
 Creamos la base de datos dvdrental 
 
 !sudo -u postgres psql -U postgres -c 'CREATE DATABASE dvdrental;'
+
+Cargamos la base de datos dvdrental a partir del archivo dvdrental.sql
+
+!sudo -u postgres psql -U postgres dvdrental /content/drive/MyDrive/prueba/dvdrental.sql
