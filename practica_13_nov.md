@@ -7,3 +7,8 @@ poner cada uno de los siguientes códigos para instalar postgresql.
 !sudo apt-get -y -qq install postgresql
 
 !sudo service postgresql start
+
+
+Configuramos la password a postgres del usuario postgres
+
+!sudo -u postgres psql -U postgres -c "ALTER USER postgres PASSWORD 'postgres';"
