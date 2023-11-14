@@ -20,4 +20,18 @@ Creamos la base de datos dvdrental
 
 Cargamos la base de datos dvdrental a partir del archivo dvdrental.sql
 
-!sudo -u postgres psql -U postgres dvdrental /content/drive/MyDrive/prueba/dvdrental.sql
+!sudo -u postgres psql -U postgres dvdrental < /content/drive/MyDrive/prueba/dvdrental.sql
+
+Configurando la base de datos
+
+%env DATABASE_URL=postgresql://postgres:postgres@localhost:5432/dvdrental
+
+Cargando extensión de sql 
+
+%load_ext sql 
+
+Para ejecutar una sencilla consulta sql 
+
+%%sql
+
+SELECT first_name FROM customer;
